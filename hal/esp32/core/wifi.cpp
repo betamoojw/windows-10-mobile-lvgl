@@ -40,6 +40,10 @@ void scanWifi(void *parameter)
     {
         lv_label_set_text(wifi_status, "no networks found");
     }
+    else if (n < 0)
+    {
+        lv_label_set_text_fmt(wifi_status, "WiFi scan error %d", n);
+    }
     else
     {
         lv_label_set_text_fmt(wifi_status, "Found %d networks", n);

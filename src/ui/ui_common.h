@@ -89,7 +89,7 @@ typedef struct _wifi_info_t
 } wifi_info_t;
 
 
-
+extern accent_color_t colors[];
 
 
 lv_obj_t *cm_create_text(lv_obj_t *parent, const char *text);

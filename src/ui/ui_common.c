@@ -4,6 +4,28 @@
 
 
 
+accent_color_t colors[] = {
+    {"Lime", 0xA4C400},
+    {"Green", 0x60A917},
+    {"Emerald", 0x00BA00},
+    {"Teal", 0x00ABA9},
+    {"Cyan", 0x1BA1E2},
+    {"Cobalt", 0x0050EF},
+    {"Indigo", 0x6A00FF},
+    {"Violet", 0xAA00FF},
+    {"Pink", 0xF472D0},
+    {"Magenta", 0xD80073},
+    {"Crimson", 0xA20025},
+    {"Red", 0xE51400},
+    {"Orange", 0xFA6800},
+    {"Amber", 0xF0A30A},
+    {"Yellow", 0xE3C800},
+    {"Brown", 0x825A2C},
+    {"Olive", 0x6D8764},
+    {"Steel", 0x647687},
+    {"Mauve", 0x76608A},
+    {"Taupe", 0x87794E},
+};
 
 
 lv_obj_t *cm_create_text(lv_obj_t *parent, const char *text)
@@ -152,6 +174,7 @@ lv_obj_t *cm_create_slider(lv_obj_t *parent, int value, int min, int max, void (
     lv_obj_set_align(ui_cm_slider, LV_ALIGN_CENTER);
     lv_obj_set_style_bg_color(ui_cm_slider, lv_color_hex(0x646464), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_cm_slider, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_all(ui_cm_slider, 10, LV_PART_KNOB | LV_STATE_DEFAULT);
 
     lv_obj_add_event_cb(ui_cm_slider, callback, LV_EVENT_VALUE_CHANGED, NULL);
 

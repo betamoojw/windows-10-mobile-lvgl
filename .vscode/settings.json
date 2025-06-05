@@ -10,6 +10,13 @@
         "functional": "c",
         "tuple": "c",
         "utility": "c",
-        "system_error": "c"
+        "system_error": "c",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "optional": "cpp",
+        "format": "cpp",
+        "ratio": "cpp",
+        "regex": "cpp",
+        "type_traits": "cpp"
     }
 }

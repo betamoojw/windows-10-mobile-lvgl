@@ -4,7 +4,6 @@
 // Project name: W10M
 
 #include "ui.h" 
-#include "ui_common.h"
 #include "stars.h"
 
 ///////////////////// VARIABLES ////////////////////
@@ -336,28 +335,7 @@ quick_action actions[] = {
     {0x00CA, "Location", &ui_img_location_ic_png, true},
 };
 
-accent_color_t colors[] = {
-    {"Lime", 0xA4C400},
-    {"Green", 0x60A917},
-    {"Emerald", 0x00BA00},
-    {"Teal", 0x00ABA9},
-    {"Cyan", 0x1BA1E2},
-    {"Cobalt", 0x0050EF},
-    {"Indigo", 0x6A00FF},
-    {"Violet", 0xAA00FF},
-    {"Pink", 0xF472D0},
-    {"Magenta", 0xD80073},
-    {"Crimson", 0xA20025},
-    {"Red", 0xE51400},
-    {"Orange", 0xFA6800},
-    {"Amber", 0xF0A30A},
-    {"Yellow", 0xE3C800},
-    {"Brown", 0x825A2C},
-    {"Olive", 0x6D8764},
-    {"Steel", 0x647687},
-    {"Mauve", 0x76608A},
-    {"Taupe", 0x87794E},
-};
+
 
 #define MAX_LIVE 10
 
@@ -1546,7 +1524,7 @@ void init_custom(void)
     
     lv_obj_set_parent(ui_themePanel, parent);
     lv_obj_set_parent(ui_themePanel, ui_personalizationPanel);
-    for (int a = 0; a < (sizeof(colors) / sizeof(colors[0])); a++)
+    for (int a = 0; a < 20; a++)
     {
         cm_accent_color(ui_themePanel, colors[a], theme_change);
     }

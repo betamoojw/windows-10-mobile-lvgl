@@ -2,11 +2,11 @@
 #include "Arduino.h"
 #include <lvgl.h>
 
-#ifdef ELECROW
+#ifdef WT32
+#include "PanelLan.h"
+#else
 #define LGFX_USE_V1
 #include <LovyanGFX.hpp>
-#else
-#include "PanelLan.h"
 #endif
 #include <ChronosESP32.h>
 #include <ESP32Time.h>
@@ -33,6 +33,9 @@
 #define SCR 50
 #define BOARD BOARD_SC01_PLUS
 #define NAME "WT32 SC01 Plus"
+#elif VIEWE
+#define SCR 50
+#define NAME "VIEWE 3.5"
 #else
 #define SCR 8
 #define BOARD BOARD_SC01
@@ -42,6 +45,8 @@
 
 #ifdef ELECROW
 #include "displays/LGFX_ELECROW_3_5.hpp"
+#elif VIEWE
+#include "displays/LGFX_VIEWE_3_5.hpp"
 #else
 PanelLan tft(BOARD);
 #endif
